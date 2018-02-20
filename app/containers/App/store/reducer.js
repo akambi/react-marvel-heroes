@@ -12,7 +12,7 @@
 
 import { fromJS } from 'immutable';
 
-import { FETCH_ALL_CHARACTERS, FETCH_CHARACTER } from './constants';
+import { FETCH_ALL_CHARACTERS, FETCH_CHARACTER, CHANGE_FILTER } from './constants';
 
 // The initial state of the App
 const initialState = fromJS({
@@ -49,7 +49,7 @@ function appReducer(state = initialState, action) {
           error: false,
           total: action.total,
           hasMore: action.hasMore,
-          items: state.getIn(['characters', 'items']).concat(action.characters),
+          items: action.characters,
           original: state.getIn(['characters', 'items']),
         },
       });
@@ -61,6 +61,10 @@ function appReducer(state = initialState, action) {
           error: action.error,
         },
       });
+
+    case CHANGE_FILTER:
+      return state
+        .setIn(['characters', 'filter'], action.filter);
 
     case FETCH_CHARACTER.REQUEST:
       return state

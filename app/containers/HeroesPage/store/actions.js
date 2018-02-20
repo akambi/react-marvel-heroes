@@ -21,6 +21,6 @@ import { CHANGE_FILTER } from './constants';
 export function changeFilter(filter) {
   return {
     type: CHANGE_FILTER,
-    name,
+    filter,
   };
 }

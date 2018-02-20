@@ -6,4 +6,8 @@
 import { defineMessages } from 'react-intl';
 
 export default defineMessages({
+  filter: {
+    id: 'marvel.containers.HeroesPage.filter',
+    defaultMessage: 'Filter by',
+  },
 });

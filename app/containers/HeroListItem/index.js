@@ -10,10 +10,6 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import { GridListTile, GridListTileBar } from 'material-ui/GridList';
-import StyledIconButton from './StyledIconButton';
-import InfoIcon from 'material-ui-icons/Info';
-
-import IssueLink from './IssueLink';
 import Wrapper from './Wrapper';
 import { Link } from 'react-router-dom';
 
@@ -30,14 +26,6 @@ export class HeroListItem extends React.PureComponent { // eslint-disable-line r
           </Link>
           <GridListTileBar
             title={item.name}
-            subtitle={<Wrapper>{item.urls.map((urlConfig, index) => <IssueLink key={`url-${index}`} href={urlConfig.url} target="_blank">
-            {urlConfig.type.charAt(0).toUpperCase() + urlConfig.type.slice(1)}
-            </IssueLink>)}</Wrapper>}
-            actionIcon={
-              <StyledIconButton>
-                <InfoIcon />
-              </StyledIconButton>
-            }
           />
       </GridListTile>
     );

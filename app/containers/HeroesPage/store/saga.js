@@ -3,7 +3,7 @@
  */
 
 import { call, put, select, takeLatest } from 'redux-saga/effects';
-import { FETCH_ALL_CHARACTERS } from 'containers/App/store/constants';
+import { FETCH_ALL_CHARACTERS, CHANGE_FILTER } from 'containers/App/store/constants';
 
 import {
   charactersFetched,
@@ -40,5 +40,6 @@ function* fetchAllCharacters(action) {
  * Root saga manages watcher lifecycle
  */
 export default function* rootSagas() {
-  yield takeLatest(FETCH_ALL_CHARACTERS.REQUEST, fetchAllCharacters)
+  yield takeLatest(FETCH_ALL_CHARACTERS.REQUEST, fetchAllCharacters);
+  yield takeLatest(CHANGE_FILTER, fetchAllCharacters);
 }

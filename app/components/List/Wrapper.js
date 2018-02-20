@@ -5,7 +5,6 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   overflow: hidden;
-  background-color: green;
 `;
 
 export default Wrapper;

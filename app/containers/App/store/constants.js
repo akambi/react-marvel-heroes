@@ -27,5 +27,6 @@ const makeActionTypes = (base) => {
   return actionTypes
 }
 
-export const FETCH_ALL_CHARACTERS = makeActionTypes('Marvel/App/FETCH_ALL_CHARACTERS')
-export const FETCH_CHARACTER = makeActionTypes('Marvel/App/FETCH_CHARACTER')
+export const FETCH_ALL_CHARACTERS = makeActionTypes('Marvel/App/FETCH_ALL_CHARACTERS');
+export const FETCH_CHARACTER = makeActionTypes('Marvel/App/FETCH_CHARACTER');
+export const CHANGE_FILTER = 'Marvel/Heroes/CHANGE_FILTER';

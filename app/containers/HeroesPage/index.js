@@ -61,7 +61,7 @@ export class HeroesPage extends React.PureComponent { // eslint-disable-line rea
           <Section>
             <Form onSubmit={this.props.onSubmitForm}>
               <label htmlFor="filter">
-                Filter replace by messages
+                Filter by
                 <Input
                   id="filter"
                   type="text"
