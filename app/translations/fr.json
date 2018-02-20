@@ -1,11 +1,8 @@
 {
   "marvel.components.Footer.author.message": "Par {author}.",
   "marvel.components.Footer.license.message": "Project libre sous licence MIT.",
-  "marvel.components.Header.features": "",
-  "marvel.components.Header.home": "",
-  "marvel.containers.FeaturePage.css.header": "",
-  "marvel.containers.HomePage.start_project.header": "Beginnen Sie Ihr nächstes React Projekt in Sekunden",
   "marvel.containers.LocaleToggle.fr": "",
   "marvel.containers.LocaleToggle.en": "",
-  "marvel.containers.NotFoundPage.header": "Seite nicht gefunden."
+  "marvel.containers.NotFoundPage.header": "Page non trouvé.",
+  "marvel.containers.HeroesPage.filter": "Filtrer par"
 }

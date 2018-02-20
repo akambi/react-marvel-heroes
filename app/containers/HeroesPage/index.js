@@ -61,11 +61,11 @@ export class HeroesPage extends React.PureComponent { // eslint-disable-line rea
           <Section>
             <Form onSubmit={this.props.onSubmitForm}>
               <label htmlFor="filter">
-                Filter by
+              <FormattedMessage {...messages.filter} /> &nbsp;
                 <Input
                   id="filter"
                   type="text"
-                  placeholder="Filter by hero's name"
+                  placeholder="hero's name"
                   value={this.props.filter || ''}
                   onChange={this.props.onChangeFilter}
                 />

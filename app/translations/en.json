@@ -1,10 +1,6 @@
 {
   "marvel.components.Footer.author.message": "By {author}.",
   "marvel.components.Footer.license.message": "This project is licensed under the MIT license.",
-  "marvel.components.Header.features": "Features",
-  "marvel.components.Header.home": "Home",
-  "marvel.containers.HeroPage.css.header": "Features",
-  "marvel.containers.HomePage.start_project.header": "Start your next react project in seconds",
   "marvel.containers.LocaleToggle.fr": "fr",
   "marvel.containers.LocaleToggle.en": "en",
   "marvel.containers.NotFoundPage.header": "Page not found.",
