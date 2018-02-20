@@ -15,32 +15,32 @@ export default class MarvelAPI {
     const hash = CryptoJS.MD5(timeStamp + config.privateKey + config.publicKey)
       .toString(CryptoJS.enc.Hex);
 
-    const offset = options.page === 1 ? 0 : (options.count * (options.page - 1))
+    const offset = options.page === 1 ? 0 : (options.count * (options.page - 1));
 
-    let params = `?apikey=${config.publicKey}&ts=${timeStamp}&hash=${hash}&limit=${options.count}&offset=${offset}`
+    let params = `?apikey=${config.publicKey}&ts=${timeStamp}&hash=${hash}&limit=${options.count}&offset=${offset}`;
 
     if (options.name) {
-      params = params.concat(`&name=${options.name}`)
+      params = params.concat(`&name=${options.name}`);
     }
     if (options.nameStartsWith) {
-      params = params.concat(`&nameStartsWith=${options.nameStartsWith}`)
+      params = params.concat(`&nameStartsWith=${options.nameStartsWith}`);
     }
-    const url = `${config.baseUrl}${URI}${params}`
+    const url = `${config.baseUrl}${URI}${params}`;
 
-    return request(url)
+    return request(url);
   }
 
   static fetchCharacter(characterId) {
-    const URI = `/v1/public/characters/${characterId}`
+    const URI = `/v1/public/characters/${characterId}`;
 
     const timeStamp = moment().unix();
     const hash = CryptoJS.MD5(timeStamp + config.privateKey + config.publicKey)
       .toString(CryptoJS.enc.Hex);
 
-    const params = `?apikey=${config.publicKey}&ts=${timeStamp}&hash=${hash}`
-    
-    const url = `${config.baseUrl}${URI}${params}`
+    const params = `?apikey=${config.publicKey}&ts=${timeStamp}&hash=${hash}`;
 
-    return request(url)
+    const url = `${config.baseUrl}${URI}${params}`;
+
+    return request(url);
   }
 }
